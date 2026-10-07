@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        EduGenie - AI Learning Assistant
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', path='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="container">
+
+
+        <!-- HEADER -->
+
+        <header class="hero">
+
+            <div>
+
+                <p class="eyebrow">
+                    AI POWERED LEARNING
+                </p>
+
+                <h1>
+                    EduGenie
+                </h1>
+
+                <p class="subtitle">
+                    Ask questions, understand concepts,
+                    practice with quizzes, summarize content,
+                    and build your learning path.
+                </p>
+
+            </div>
+
+
+            <div
+                class="status"
+                id="status"
+            >
+                Ready
+            </div>
+
+        </header>
+
+
+        <!-- INPUT CARD -->
+
+        <section class="card">
+
+
+            <label for="task">
+                Choose a task
+            </label>
+
+
+            <select id="task">
+
+                <option value="qa">
+                    Ask a Question
+                </option>
+
+                <option value="explain">
+                    Explain a Topic
+                </option>
+
+                <option value="quiz">
+                    Generate Quiz
+                </option>
+
+                <option value="summarize">
+                    Summarize
+                </option>
+
+                <option value="learn">
+                    Learning Path
+                </option>
+
+            </select>
+
+
+            <label for="inputText">
+                Your input
+            </label>
+
+
+            <textarea
+                id="inputText"
+                rows="10"
+                placeholder="Enter your question, topic, passage, or learning goal..."
+            ></textarea>
+
+
+            <button id="submitBtn">
+                Generate
+            </button>
+
+
+        </section>
+
+
+        <!-- RESULT -->
+
+        <section class="card result-card">
+
+
+            <div class="result-header">
+
+                <h2>
+                    Result
+                </h2>
+
+
+                <button
+                    class="secondary"
+                    id="copyBtn"
+                    disabled
+                >
+                    Copy
+                </button>
+
+            </div>
+
+
+            <div
+                id="result"
+                class="result muted"
+            >
+                Your AI-generated result
+                will appear here.
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script
+        src="{{ url_for('static', path='app.js') }}"
+    ></script>
+
+</body>
+
+</html>

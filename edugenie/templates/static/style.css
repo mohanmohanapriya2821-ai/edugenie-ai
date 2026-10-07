@@ -1,0 +1,512 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+:root {
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: #18202a;
+
+    background: #f4f7fb;
+}
+
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef4ff,
+            #f8fafc
+        );
+
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+
+    width:
+        min(
+            1000px,
+            calc(100% - 32px)
+        );
+
+    margin: 0 auto;
+
+    padding:
+        42px
+        0
+        60px;
+
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        flex-start;
+
+    gap: 20px;
+
+    margin-bottom: 24px;
+
+}
+
+
+.eyebrow {
+
+    margin:
+        0
+        0
+        8px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing:
+        .14em;
+
+    color:
+        #536dfe;
+
+}
+
+
+h1 {
+
+    margin: 0;
+
+    font-size:
+        clamp(
+            36px,
+            7vw,
+            62px
+        );
+
+}
+
+
+.subtitle {
+
+    margin-top: 8px;
+
+    color:
+        #667085;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status {
+
+    padding:
+        9px
+        13px;
+
+    border-radius:
+        999px;
+
+    background:
+        #e9eefc;
+
+    color:
+        #4154a6;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .92
+        );
+
+    border:
+        1px solid
+        #e5e7eb;
+
+    border-radius:
+        20px;
+
+    padding:
+        24px;
+
+    margin-top:
+        18px;
+
+    box-shadow:
+        0
+        12px
+        35px
+        rgba(
+            16,
+            24,
+            40,
+            .06
+        );
+
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+label {
+
+    display:
+        block;
+
+    margin:
+        0
+        0
+        8px;
+
+    font-weight:
+        700;
+
+}
+
+
+select,
+textarea {
+
+    width:
+        100%;
+
+    border:
+        1px solid
+        #d0d5dd;
+
+    border-radius:
+        12px;
+
+    background:
+        #ffffff;
+
+    padding:
+        13px
+        14px;
+
+    font:
+        inherit;
+
+    margin-bottom:
+        18px;
+
+}
+
+
+textarea {
+
+    resize:
+        vertical;
+
+    min-height:
+        190px;
+
+}
+
+
+select:focus,
+textarea:focus {
+
+    outline:
+        3px solid
+        rgba(
+            83,
+            109,
+            254,
+            .15
+        );
+
+    border-color:
+        #536dfe;
+
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+button {
+
+    border:
+        0;
+
+    border-radius:
+        12px;
+
+    padding:
+        12px
+        18px;
+
+    background:
+        #536dfe;
+
+    color:
+        white;
+
+    font:
+        inherit;
+
+    font-weight:
+        800;
+
+    cursor:
+        pointer;
+
+}
+
+
+button:hover {
+
+    opacity:
+        .92;
+
+}
+
+
+button:disabled {
+
+    opacity:
+        .55;
+
+    cursor:
+        not-allowed;
+
+}
+
+
+.secondary {
+
+    background:
+        #eef2f7;
+
+    color:
+        #344054;
+
+    padding:
+        9px
+        13px;
+
+}
+
+
+/* =========================================
+   RESULT
+========================================= */
+
+.result-header {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    margin-bottom:
+        14px;
+
+}
+
+
+.result {
+
+    white-space:
+        pre-wrap;
+
+    line-height:
+        1.7;
+
+    color:
+        #344054;
+
+}
+
+
+.muted {
+
+    color:
+        #98a2b3;
+
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.error {
+
+    color:
+        #b42318;
+
+    background:
+        #fef3f2;
+
+    padding:
+        14px;
+
+    border-radius:
+        12px;
+
+}
+
+
+/* =========================================
+   QUIZ
+========================================= */
+
+.quiz-question {
+
+    border:
+        1px solid
+        #eaecf0;
+
+    border-radius:
+        14px;
+
+    padding:
+        16px;
+
+    margin:
+        12px 0;
+
+}
+
+
+.quiz-question h3 {
+
+    margin-top:
+        0;
+
+}
+
+
+.option {
+
+    display:
+        block;
+
+    padding:
+        9px 0;
+
+}
+
+
+/* =========================================
+   LEARNING PATH
+========================================= */
+
+.path-step {
+
+    border-left:
+        4px solid
+        #536dfe;
+
+    padding:
+        8px
+        0
+        8px
+        16px;
+
+    margin:
+        16px 0;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (
+    max-width: 650px
+) {
+
+    .container {
+
+        width:
+            min(
+                100% - 20px,
+                1000px
+            );
+
+        padding-top:
+            24px;
+
+    }
+
+
+    .hero {
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .card {
+
+        padding:
+            18px;
+
+    }
+
+}
